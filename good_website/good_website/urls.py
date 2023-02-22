@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from apps.cart_shop.urls import router as cart_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,7 @@ urlpatterns = [
     path('blog/', include('apps.blog.urls')),
     path('checkout/', include('apps.checkout.urls')),
     path('shop/', include('apps.shop.urls')),
+    path('auth_shop/', include('apps.auth_shop.urls')),
+    path('api/', include(cart_router.urls)),
 
 ]

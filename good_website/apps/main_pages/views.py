@@ -29,7 +29,7 @@ class IndexView(View):
 
 class Login(View):
     def get(self, request):
-        return render(request, 'login/index.html')
+        return render(request, 'auth_shop/index.html')
 
     def post(self, request):
         return JsonResponse(request.POST, json_dumps_params={'indent': 4})
